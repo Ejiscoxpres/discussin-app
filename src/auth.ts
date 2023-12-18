@@ -10,6 +10,7 @@ if(!GitHub_CLIENT_ID || !GitHub_CLIENT_SECRET){
     throw new Error('Missing github auth credentials');
 }
 
+
 export const {handlers:{GET,POST}, auth, signOut,signIn} =NextAuth({
     adapter: PrismaAdapter(db),
     providers:[
