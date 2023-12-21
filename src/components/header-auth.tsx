@@ -33,8 +33,7 @@ export default function HeaderAuth(){
             <Avatar src={session.data.user.image || ''}/>
             </PopoverTrigger>
             <PopoverContent>
-                <div className="p-4">
-                    
+                <div className="p-4">             
                     <form action={actions.signOut}>
                         <Button type="submit"> SignOut </Button>
                     </form>
