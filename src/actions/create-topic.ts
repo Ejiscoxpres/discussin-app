@@ -13,7 +13,7 @@ export async function createTopic(formData: FormData){
         description: formData.get('name')
     });
         if(!result.success){
-            console.log(result.error);
+            console.log(result.error.flatten().fieldErrors);
         }
     
 
