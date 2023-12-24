@@ -8,9 +8,12 @@ import { db } from "@/db";
         user:{name: string | null};
         _count:{comments: number}
     }
-)*/
+)*/ 
+//  OR...
 
-export type PostWithData = Awaited<ReturnType<typeof fetchPostsbyTopicSlug>>[number];
+export type PostWithData = Awaited<
+ReturnType<typeof fetchPostsbyTopicSlug>
+>[number];
 
 export function fetchPostsbyTopicSlug(slug:string){
     return db.post.findMany({
